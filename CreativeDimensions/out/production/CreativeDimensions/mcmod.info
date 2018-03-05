@@ -1,0 +1,16 @@
+[
+{
+  "modid": "creaivedimensions",
+  "name": "Creative Dimensions",
+  "description": "Creaive Dimensions",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Drazisil"],
+  "credits": "Xander_Fury for moral support and project management",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

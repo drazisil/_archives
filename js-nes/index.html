@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jsNES</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="js/jsCart.js"></script>
+        <script type="text/javascript" src="js/jsROM.js"></script>
+        <script type="text/javascript" src="js/js6202.js"></script>
+        <script type="text/javascript" src="js/jsNESSystem.js"></script>
+    </head>
+    <body>
+        <div><canvas id="snesScreen" width="256" height="224" style="border: 1px dotted;"></canvas></div>
+        <script type="text/javascript">
+            function isSystemReady(cpu, cycleCount) {
+                if (cpu.cart.state === true) {
+                    clearTimeout(1); // default under Chrome
+                    clearTimeout(2); // Default under Firefox
+                    cpu.run(cycleCount);
+                }
+            }
+            debugMode = true;
+            maxCycles = 5;
+
+            nes = new jsNESSystem();
+            nes.POST();
+            nes.cart.insert('http://jwebnet.net/tmp/SMB.nes');
+            nes.Reset();
+
+            timeoutID = setInterval(isSystemReady, 500, nes, maxCycles);
+
+        </script>
+    </body>
+</html>

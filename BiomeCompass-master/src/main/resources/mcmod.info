@@ -1,0 +1,16 @@
+[
+{
+  "modid": "biomecompass",
+  "name": "Biome Compass",
+  "description": "Helps in locating biomes",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://www.curse.com/mc-mods/minecraft/227492-biome-compass",
+  "updateUrl": "",
+  "authorList": ["Drazisil"],
+  "credits": "Compass texture by Xander_Fury",
+  "logoFile": "biomecompass_logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

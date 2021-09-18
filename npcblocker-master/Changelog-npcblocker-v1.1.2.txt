@@ -1,0 +1,12 @@
+tag v1.1.2
+a8f2199ec642f880687133d888ae38aacbf64917
+Joseph W Becher <jwbecher@gmail.com>
+2013-10-05 15:20:25 -0400
+
+Typo correction for Digao, also work to move the npcs into a database for later ease of editing.
+
+--------------------
+
+Joseph W Becher:
+	- Typo correction for Gigao, also work to move the npcs into a database for later ease of editing.
+	- adding a options interface panel

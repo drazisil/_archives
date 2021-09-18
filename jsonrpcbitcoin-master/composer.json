@@ -1,0 +1,20 @@
+{
+    "name": "jsonrpcbitcoin/jsonrpcbitcoin",
+    "description": "JSON-RPC client library for bitcoin in PHP",
+    "keywords": ["JSON-RPC","Bitcoin"],
+    "authors": [
+        {
+            "name": "Joseph W Becher",
+            "email": "jwbecher@drazisil.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "ext-curl": "0.0.0",
+        "ext-json": ">=1.2"
+    },
+    "license": "Apache-2.0",
+    "autoload": {
+        "psr-0": {"JsonRpcBitcoin": "src/"}
+    }
+}

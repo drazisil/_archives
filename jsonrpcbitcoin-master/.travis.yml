@@ -1,0 +1,32 @@
+sudo: required
+language: php
+
+php:
+  - 5.4
+
+before_install:
+  - sudo apt-add-repository ppa:bitcoin/bitcoin -y
+  - sudo apt-get update -q
+  - sudo apt-get install --no-install-recommends --no-upgrade -qq bitcoind
+  - sudo apt-get install -y build-essential 
+  - sudo apt-get install -y automake
+
+before_script:
+  - composer self-update
+  - composer update
+  - composer install
+  
+script: 
+#start bitcoin regtest daemon and 101 blocks
+ - mkdir /home/travis/.bitcoin
+ - cp tests/bitcoin.conf /home/travis/.bitcoin/.
+ - chmod 600 /home/travis/.bitcoin/bitcoin.conf
+ - bitcoind -regtest -daemon 
+ - sleep 5
+ - bitcoin-cli -regtest setgenerate true 50
+#run checks that bitcoind is running
+ - bitcoin-cli -regtest getinfo
+ - bitcoin-cli -regtest getblockhash 20
+#run tests
+ - cp tests/config-example.php tests/config.php
+ - phpunit tests/JsonRpcBitcoinTest.php

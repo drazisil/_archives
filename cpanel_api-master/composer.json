@@ -1,0 +1,8 @@
+{
+    "name": "cpanel_api/cpanel_api",
+    "description": "a small php class that simplifies api calls to cpanel",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
